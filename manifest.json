@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "StackOverflow Sidebar Hider",
+  "description": "Hide StackOverflow's sidebar.",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ],
+
+  "content_scripts":[
+    {
+      "matches":["*://stackoverflow.com/*"],
+      "js": [
+        "node_modules/jquery/dist/jquery.slim.min.js",
+        "hide_sidebar.js"
+      ]
+    }
+  ]
+}
